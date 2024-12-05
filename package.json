@@ -1,0 +1,22 @@
+{
+  "name": "lvmh",
+  "version": "1.0.0",
+  "description": "Sur terre comme au ciel, moi seul mérite d'être vénéré.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MorganSio/LVMH.git"
+  },
+  "author": "LVMH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MorganSio/LVMH/issues"
+  },
+  "homepage": "https://github.com/MorganSio/LVMH#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
