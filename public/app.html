@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .step { display: none; }
+    .step.active { display: block; }
+    .correct { color: green; }
+    .incorrect { color: red; }
+    .feedback { display: none; }
+    .feedback img { width: 50px; height: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LVMH</h1>
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="#">Accueil</a>
+        </li>
+        <li>
+          <a href="#">Jeu</a>
+        </li>
+        <li>
+          <a href="app.html">Quizz</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="welcome-section">
+      <form id="quizForm">
+        <div class="step active">
+          <h2>Questions Faciles</h2>
+          <p>Quel est l'objectif principal de l'ODD 14 ?</p>
+          <label><input type="radio" name="q1" value="a"> a) Éradiquer la pauvreté</label><br>
+          <label><input type="radio" name="q1" value="b"> b) Conserver et utiliser de manière durable les océans, les mers et les ressources marines</label><br>
+          <label><input type="radio" name="q1" value="c"> c) Assurer l'accès de tous à des services de santé de qualité</label><br>
+          <label><input type="radio" name="q1" value="d"> d) Promouvoir une croissance économique soutenue</label><br>
+          <div class="feedback">
+            <img src="img1/2.png"" alt="Correct" class="correct-img" style="height: 200px; width:200px;">
+            <img src="img1/3.png" alt="Incorrect" class="incorrect-img"style="height: 200px; width:200px;">
+          </div>
+          <button type="button" onclick="checkAnswers()">Confirmer</button>
+          <button type="button" onclick="nextStep()">Suivant</button>
+        </div>
+        <div class="step">
+          <p>Quelle est l'une des principales menaces pour la vie aquatique identifiées par l'ODD 14 ?</p>
+          <label><input type="radio" name="q2" value="a"> a) La déforestation</label><br>
+          <label><input type="radio" name="q2" value="b"> b) La pollution marine</label><br>
+          <label><input type="radio" name="q2" value="c"> c) La désertification</label><br>
+          <label><input type="radio" name="q2" value="d"> d) Les émissions de gaz à effet de serre</label><br>
+          <div class="feedback">
+            <img src="img1/2.png" alt="Correct" class="correct-img"style="height: 200px; width:200px;">
+            <img src="img1/4.png" alt="Incorrect" class="incorrect-img"style="height: 200px; width:200px;">
+          </div>
+          <button type="button" onclick="checkAnswers()">Confirmer</button>
+          <button type="button" onclick="nextStep()">Suivant</button>
+        </div>
+        <div class="step">
+          <p>Comment l'ODD 14 propose-t-il de réduire la pollution marine ?</p>
+          <label><input type="radio" name="q3" value="a"> a) En augmentant la production agricole</label><br>
+          <label><input type="radio" name="q3" value="b"> b) En prévenant et réduisant significativement toute forme de pollution marine</label><br>
+          <label><input type="radio" name="q3" value="c"> c) En construisant plus de centrales nucléaires</label><br>
+          <label><input type="radio" name="q3" value="d"> d) En augmentant les subventions aux énergies fossiles</label><br>
+          <div class="feedback">
+            <img src="img1/2.png" alt="Correct" class="correct-img"style="height: 200px; width:200px;">
+            <img src="img1/5.png" alt="Incorrect" class="incorrect-img"style="height: 200px; width:200px;">
+          </div>
+          <button type="button" onclick="checkAnswers()">Confirmer</button>
+          <button type="button" onclick="nextStep()">Suivant</button>
+        </div>
+        <div class="step">
+          <p>Quel rôle jouent les aires marines protégées dans la réalisation de l'ODD 14 ?</p>
+          <label><input type="radio" name="q4" value="a"> a) Elles augmentent la production de pétrole</label><br>
+          <label><input type="radio" name="q4" value="b"> b) Elles conservent la biodiversité marine</label><br>
+          <label><input type="radio" name="q4" value="c"> c) Elles réduisent les émissions de CO2</label><br>
+          <label><input type="radio" name="q4" value="d"> d) Elles augmentent la production de charbon</label><br>
+          <div class="feedback">
+            <img src="img1/2.png" alt="Correct" class="correct-img" style="height: 200px; width:200px;">
+            <img src="img1/6.png" alt="Incorrect" class="incorrect-img" style="height: 200px; width:200px;">
+          </div>
+          <button type="button" onclick="checkAnswers()">Confirmer</button>
+          <button type="button" onclick="nextStep()">Suivant</button>
+        </div>
+        <!-- Ajoutez les autres questions ici de la même manière -->
+        <div class="step">
+          <h2>Questions Moyennes</h2>
+          <p>Quels sont les impacts de la surpêche sur les écosystèmes marins ?</p>
+          <label><input type="radio" name="q5" value="a"> a) Augmentation de la biodiversité</label><br>
+          <label><input type="radio" name="q5" value="b"> b) Diminution des populations de poissons et déséquilibre des écosystèmes</label><br>
+          <label><input type="radio" name="q5" value="c"> c) Augmentation de la productivité agricole</label><br>
+          <label><input type="radio" name="q5" value="d"> d) Réduction des émissions de gaz à effet de serre</label><br>
+          <div class="feedback">
+            <img src="img1/2.png" alt="Correct" class="correct-img" style="height: 200px; width:200px;">
+            <img src="img1/7.png" alt="Incorrect" class="incorrect-img" style="height: 200px; width:200px;">
+          </div>
+          <button type="button" onclick="checkAnswers()">Confirmer</button>
+          <button type="button" onclick="nextStep()">Suivant</button>
+        </div>
+        <!-- Ajoutez les autres questions ici de la même manière -->
+        <div class="step">
+          <h2>Questions Difficiles</h2>
+          <p>Quelles sont les cibles spécifiques de l'ODD 14 pour 2030 ?</p>
+          <label><input type="radio" name="q6" value="a"> a) Éradiquer la pauvreté</label><br>
+          <label><input type="radio" name="q6" value="b"> b) Réduire la pollution marine, protéger les écosystèmes marins et côtiers, et gérer durablement les ressources marines</label><br>
+          <label><input type="radio" name="q6" value="c"> c) Assurer l'accès de tous à des services de santé de qualité</label><br>
+          <label><input type="radio" name="q6" value="d"> d) Promouvoir une croissance économique soutenue</label><br>
+          <div class="feedback">
+            <img src="img1/2.png" alt="Correct" class="correct-img" style="height: 200px; width:200px;">
+            <img src="img1/7.png" alt="Incorrect" class="incorrect-img" style="height: 200px; width:200px;">
+          </div>
+          <button type="button" onclick="checkAnswers()">Confirmer</button>
+          <button type="button" onclick="nextStep()">Suivant</button>
+        </div>
+        <!-- Ajoutez les autres questions ici de la même manière -->
+        <div class="step">
+          <button type="button" onclick="checkAnswers()">Soumettre</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+  </footer>
+
+  <script>
+    let currentStep = 0;
+    const steps = document.querySelectorAll('.step');
+    const correctAnswers = {
+        q1: 'b',
+        q2: 'b',
+        q3: 'b',
+        q4: 'b',
+        q5: 'b',
+        q6: 'b'
+        // Ajoutez les autres réponses correctes ici
+    };
+
+    
+    
+
+    function nextStep() {
+        steps[currentStep].classList.remove('active');
+        currentStep++;
+        if (currentStep < steps.length) {
+            steps[currentStep].classList.add('active');
+        }
+    }
+
+
+    function checkAnswers() {
+    const form = document.getElementById('quizForm');
+    const formData = new FormData(form);
+    let score = 0;
+
+    for (let [name, value] of formData.entries()) {
+        const question = document.querySelector(`input[name="${name}"][value="${value}"]`);
+        const feedback = question.closest('.step').querySelector('.feedback');
+        const correctImg = feedback.querySelector('.correct-img');
+        const incorrectImg = feedback.querySelector('.incorrect-img');
+
+        if (value === correctAnswers[name]) {
+            question.parentElement.classList.add('correct');
+            correctImg.style.display = 'inline';
+            incorrectImg.style.display = 'none';
+            score++;
+        } else {
+            question.parentElement.classList.add('incorrect');
+            correctImg.style.display = 'none';
+            incorrectImg.style.display = 'inline';
+        }
+
+        feedback.style.display = 'block';
+    }
+
+    alert(`Vous avez obtenu ${score} sur ${Object.keys(correctAnswers).length}`);
+}
+  </script>
+</body>
+</html>
