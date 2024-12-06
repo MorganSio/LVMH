@@ -33,11 +33,16 @@
             <div class="popup-content">
                 <h3 id="popupTitle">Titre de la Pop-up</h3>
                 <p id="popupMessage">Message de sensibilisation</p>
-                <button onclick="closePopup()">Fermer</button>
+                <button id="close">Fermer</button>            
             </div>
         </div>
     </main>
-
+    <!-- <script> 
+        function closePopup() {
+        const popup = document.getElementById('popup');
+        popup.style.display = 'none';
+    }
+    </script> -->
     <script type="module" src="script.js"></script>
     <script type="module" src="script_qrcode.js"></script>
 </body>

@@ -45,7 +45,12 @@ function showPopup(pokemon) {
     popup.style.display = 'flex';
 }
 
-function closePopup() {
-    const popup = document.getElementById('popup');
-    popup.style.display = 'none';
-}
+window.onload = (event) => {
+    let close = document.getElementById('close');
+    close.addEventListener('click', function() {
+        const popup = document.getElementById('popup');
+        popup.style.display = 'none';
+    });
+};
+  
+
