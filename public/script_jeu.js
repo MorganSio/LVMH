@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Passer au niveau suivant si tous les polluants sont ramassés
       if (pollutants.length === 0) {
         level++;
-        alert(`Niveau ${level} atteint !`);
+        alert(` ${level} ans plus tard!`);
         resetLevel();
         removeDebris();
       }

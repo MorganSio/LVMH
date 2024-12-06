@@ -3,37 +3,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Générateur de QRCode Pokémon</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="qrcode.css">    
+    <link rel="stylesheet" href="css_style.css">
+    <link rel="stylesheet" href="css_qrcode.css">    
 </head>
 <body>
     <div id="header"></div>
     <main>
-        <div class="container">
-            <div class="qr-generator">
-                <h2>Générer un QRCode</h2>
-                <form id="qrForm">
+        <div class="form-container">
+            <h1>Générateur de QR Code Pokémon</h1>
+            <form id="qrForm">
+                <div class="form-group">
+                    <label for="url">URL à encoder</label>
                     <input type="text" id="url" placeholder="Entrez l'URL" required>
+                </div>
+                <div class="form-group">
+                    <label for="pokemon">Choisissez un Pokémon</label>
                     <select id="pokemon" required>
-                        <option value="">Sélectionnez un Pokémon</option>
+                        <option value="" disabled selected>--- Sélectionnez ---</option>
                         <option value="magicarp">Magicarp</option>
                         <option value="bulbasaur">Bulbasaur</option>
                         <option value="charmander">Charmander</option>
                         <option value="squirtle">Squirtle</option>
                         <option value="pikachu">Pikachu</option>
                     </select>
-                    <button type="submit">Générer</button>
-                </form>
-                <div class="qr-code" id="qrCode">
-                    <!-- QR Code will be displayed here -->
                 </div>
-            </div>
+                <button type="submit" class="btn">Générer le QR Code</button>
+            </form>
+            <div id="qrCode" class="qr-display"></div>
         </div>
-        <div class="popup" id="popup">
+    
+        <div id="popup" class="popup">
             <div class="popup-content">
-                <h3 id="popupTitle">Titre de la Pop-up</h3>
-                <p id="popupMessage">Message de sensibilisation</p>
-                <button id="close">Fermer</button>            
+                <h2 id="popupTitle"></h2>
+                <p id="popupMessage"></p>
+                <button id="close" class="btn">Fermer</button>
             </div>
         </div>
     </main>
@@ -45,5 +48,7 @@
     </script> -->
     <script type="module" src="script.js"></script>
     <script type="module" src="script_qrcode.js"></script>
+    <script type="module" src="script_bubules.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 </body>
 </html>

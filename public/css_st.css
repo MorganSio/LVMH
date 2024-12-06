@@ -1,0 +1,203 @@
+/* Réinitialisation */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  /* Corps de la page */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+ 
+  /* En-tête */
+  header {
+    background-color: #0320ff;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+ 
+  header h1 {
+    margin-bottom: 0.5rem;
+  }
+ 
+  nav ul.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+  }
+ 
+  nav ul.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    transition: 0.3s;
+  }
+ 
+  nav ul.menu li a:hover {
+    background-color: white;
+    color: #0320ff;
+    border-color: #0320ff;
+    border-radius: 5px;
+  }
+ 
+  /* Section de jeu */
+  main .game-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    flex-grow: 1;
+  }
+ 
+  .game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  #gameCanvas {
+    border: 2px solid #0320ff;
+    margin-top: 1rem;
+  }
+ 
+  #humanBodyContainer {
+    position: relative;
+    margin-left: 20px;
+  }
+ 
+  #humanBody {
+    width: 200px;
+    height: auto;
+  }
+ 
+  #debrisOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+ 
+  .debris {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }
+ 
+  #debrisArmLeft {
+    top: 25%;
+    left: 10%;
+  }
+ 
+  #debrisArmRight {
+    top: 25%;
+    left: 60%;
+  }
+ 
+  #debrisLegLeft {
+    top: 70%;
+    left: 30%;
+  }
+ 
+  #debrisLegRight {
+    top: 70%;
+    left: 50%;
+  }
+ 
+  #debrisHead {
+    top: 5%;
+    left: 35%;
+  }
+ 
+  #debrisHeart {
+    top: 45%;
+    left: 35%;
+  }
+ 
+  #infoPanel {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #0320ff;
+  }
+ 
+  #infoPanel p {
+    margin: 0.5rem 0;
+  }
+ 
+  /* Pied de page */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+  }
+ 
+  /* Réinitialisation */
+  body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  /* Corps de la page */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+ 
+  /* En-tête */
+  header {
+    background-color: #0320ff;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+ 
+  header h1 {
+    margin-bottom: 0.5rem;
+  }
+ 
+  /* Section de jeu */
+  main .game-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    flex-grow: 1;
+  }
+ 
+  #newGameCanvas {
+    border: 2px solid #0320ff;
+    margin-top: 1rem;
+  }
+ 
+  #infoPanel {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #0320ff;
+  }
+ 
+  #infoPanel p {
+    margin: 0.5rem 0;
+  }
+ 
+  /* Pied de page */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+  }

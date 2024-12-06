@@ -50,21 +50,18 @@ function updateGame() {
 
 // Dessiner le plongeur
 function drawDiver() {
-    // Corps du plongeur
-    ctx.fillStyle = '#1E90FF'; // Bleu océan
+
+    ctx.fillStyle = '#1E90FF'; 
     ctx.fillRect(diver.x, diver.y, diver.width, diver.height);
 
-    // Tête du plongeur
     ctx.beginPath();
-    ctx.arc(diver.x + diver.width / 2, diver.y - 10, 10, 0, Math.PI * 2); // Tête ronde
-    ctx.fillStyle = '#FFD700'; // Jaune pour le casque
+    ctx.arc(diver.x + diver.width / 2, diver.y - 10, 10, 0, Math.PI * 2); 
+    ctx.fillStyle = '#FFD700'; 
     ctx.fill();
 
-    // Masque
-    ctx.fillStyle = '#000000'; // Masque noir
+    ctx.fillStyle = '#000000'; 
     ctx.fillRect(diver.x + diver.width / 4, diver.y - 14, diver.width / 2, 6);
 
-    // Bras gauche
     ctx.beginPath();
     ctx.moveTo(diver.x, diver.y + 10);
     ctx.lineTo(diver.x - 15, diver.y + 25);
@@ -72,7 +69,6 @@ function drawDiver() {
     ctx.strokeStyle = '#1E90FF';
     ctx.stroke();
 
-    // Bras droit
     ctx.beginPath();
     ctx.moveTo(diver.x + diver.width, diver.y + 10);
     ctx.lineTo(diver.x + diver.width + 15, diver.y + 25);
@@ -80,8 +76,7 @@ function drawDiver() {
     ctx.strokeStyle = '#1E90FF';
     ctx.stroke();
 
-    // Palmes
-    ctx.fillStyle = '#8B0000'; // Rouge sombre pour les palmes
+    ctx.fillStyle = '#8B0000'; 
     ctx.fillRect(diver.x - 5, diver.y + diver.height, 10, 10);
     ctx.fillRect(diver.x + diver.width - 5, diver.y + diver.height, 10, 10);
 }
@@ -89,7 +84,7 @@ function drawDiver() {
 // Dessiner les bulles
 function drawPearls() {
     pearls.forEach(pearl => {
-        ctx.fillStyle = '#1E90FF'; // Couleur bleue
+        ctx.fillStyle = '#1E90FF'; 
         ctx.beginPath();
         ctx.arc(pearl.x, pearl.y, 10, 0, Math.PI * 2);
         ctx.fill();
@@ -113,8 +108,8 @@ function checkCollisions() {
             diver.y < pearl.y + 10 &&
             diver.y + diver.height > pearl.y - 10
         ) {
-            collectedCode += pearl.char; // Conserve le code en arrière-plan
-            return false; // Retire la bulle collectée
+            collectedCode += pearl.char; 
+            return false; 
         }
         return true;
     });

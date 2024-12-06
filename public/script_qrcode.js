@@ -9,8 +9,32 @@ document.getElementById('qrForm').addEventListener('submit', function(event) {
 
 function generateQRCode(url, pokemon) {
     const qrCodeDiv = document.getElementById('qrCode');
-    qrCodeDiv.innerHTML = `<img src="https://placehold.co/300x300?text=QR+Code+for+${pokemon}" alt="QR Code in the shape of ${pokemon}">`;
+    qrCodeDiv.innerHTML = '';
+    const canvas = document.createElement('canvas');
+    qrCodeDiv.appendChild(canvas);
+    QRCode.toCanvas(canvas, url, {
+        width: 300,
+        errorCorrectionLevel: 'H',
+    }, function(error) {
+        if (error) console.error(error);
+        else {
+            addPokemonImage(canvas, pokemon);
+        }
+    });
+
     showPopup(pokemon);
+}
+
+function addPokemonImage(qrCanvas, pokemon) {
+    const context = qrCanvas.getContext('2d');
+    const img = new Image();
+    img.src = `images/${pokemon}.png`; 
+    img.onload = function() {
+        const size = qrCanvas.width / 5;
+        const x = (qrCanvas.width - size) / 2;
+        const y = (qrCanvas.height - size) / 2;
+        context.drawImage(img, x, y, size, size);
+    };
 }
 
 function showPopup(pokemon) {
@@ -52,5 +76,3 @@ window.onload = (event) => {
         popup.style.display = 'none';
     });
 };
-  
-

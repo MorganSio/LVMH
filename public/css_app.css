@@ -1,0 +1,151 @@
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+.feedback {
+  display: none;
+}
+
+.feedback img {
+  width: 50px;
+  height: 50px;
+}
+
+.step h2 {
+  margin-top: 0;
+}
+
+.step p {
+  margin-bottom: 20px;
+}
+
+.step label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.step input[type="radio"] {
+  margin-right: 10px;
+}
+
+.step button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.step button:hover {
+  background-color: #3e8e41;
+}
+
+.step button:active {
+  transform: translateY(2px);
+}
+
+.feedback {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.correct-img {
+  display: none;
+}
+
+.incorrect-img {
+  display: none;
+}
+
+.correct-show {
+  display: block;
+}
+
+.incorrect-show {
+  display: block;
+}
+
+#quizForm {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#quizForm h2 {
+  text-align: center;
+}
+
+#quizForm p {
+  margin-bottom: 20px;
+}
+
+#quizForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#quizForm input[type="radio"] {
+  margin-right: 10px;
+}
+
+#quizForm button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+#quizForm button:hover {
+  background-color: #3e8e41;
+}
+
+#quizForm button:active {
+  transform: translateY(2px);
+}
+
+#quizForm .feedback {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.score-section {
+  text-align: center;
+  background-color: #f3f4f6;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.score-section h2 {
+  color: #4CAF50;
+  font-size: 24px;
+  margin: 0;
+}
+
+#score-display {
+  font-size: 20px;
+  color: #333;
+  margin-top: 10px;
+}
