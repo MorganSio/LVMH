@@ -16,10 +16,10 @@ function initGame() {
     requestAnimationFrame(updateGame);
 }
 
-// Générer les bulles avec des caractères aléatoires
+// Générer les bulles
 function generatePearls() {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 8; i++) {
         let char = characters.charAt(Math.floor(Math.random() * characters.length));
         code += char;
         pearls.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, char });
@@ -28,7 +28,7 @@ function generatePearls() {
 
 // Générer les obstacles
 function generateObstacles() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 8; i++) {
         obstacles.push({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
@@ -89,12 +89,10 @@ function drawDiver() {
 // Dessiner les bulles
 function drawPearls() {
     pearls.forEach(pearl => {
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = '#1E90FF'; // Couleur bleue
         ctx.beginPath();
         ctx.arc(pearl.x, pearl.y, 10, 0, Math.PI * 2);
         ctx.fill();
-        ctx.fillStyle = 'black';
-        ctx.fillText(pearl.char, pearl.x - 5, pearl.y + 5);
     });
 }
 
@@ -115,8 +113,8 @@ function checkCollisions() {
             diver.y < pearl.y + 10 &&
             diver.y + diver.height > pearl.y - 10
         ) {
-            collectedCode += pearl.char;
-            return false;
+            collectedCode += pearl.char; // Conserve le code en arrière-plan
+            return false; // Retire la bulle collectée
         }
         return true;
     });
