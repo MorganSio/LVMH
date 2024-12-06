@@ -1,18 +1,9 @@
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #e0f7fa;
+body, html {
   margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-header {
-  background-color: #00796b;
-  color: white;
-  width: 100%;
-  text-align: center;
-  padding: 20px 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  color: #333;
 }
 
 #game-container {
@@ -51,6 +42,10 @@ button:hover {
   font-size: 24px;
   color: #00796b;
   margin-top: 20px;
+  text-align: center;
+}
+
+p{
   text-align: center;
 }
 

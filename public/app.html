@@ -4,35 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .step { display: none; }
-    .step.active { display: block; }
-    .correct { color: green; }
-    .incorrect { color: red; }
-    .feedback { display: none; }
-    .feedback img { width: 50px; height: 50px; }
-  </style>
+  <link rel="stylesheet" href="css_style.css">
+  <link rel="stylesheet" href="css_app.css">
 </head>
 <body>
-  <header>
-    <h1>LVMH</h1>
-    <nav>
-      <ul class="menu">
-        <li>
-          <a href="#">Accueil</a>
-        </li>
-        <li>
-          <a href="#">Jeu</a>
-        </li>
-        <li>
-          <a href="app.html">Quizz</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <div id="header"></div>
   <main>
-    <section class="welcome-section">
+    <section class="score-section">
+      <h2>Votre score</h2>
+      <p id="score-display">Score : 0</p>
+    </section>
+  </main>
+  <main>
+    <section class="Other-Section">
       <form id="quizForm">
         <div class="step active">
           <h2>Questions Faciles</h2>
@@ -42,21 +26,23 @@
           <label><input type="radio" name="q1" value="c"> c) Assurer l'accès de tous à des services de santé de qualité</label><br>
           <label><input type="radio" name="q1" value="d"> d) Promouvoir une croissance économique soutenue</label><br>
           <div class="feedback">
-            <img src="/public/img1/1.png"" alt="Correct" class="correct-img">
-            <img src="incorrect.png" alt="Incorrect" class="incorrect-img">
+            <img src="img1/2.png"" alt="Correct" class="correct-img" style="height: 200px; width:200px;">
+            <img src="img1/3.png" alt="Incorrect" class="incorrect-img"style="height: 200px; width:200px;">
           </div>
+          <button type="button" onclick="checkAnswers()">Confirmer</button>
           <button type="button" onclick="nextStep()">Suivant</button>
         </div>
         <div class="step">
           <p>Quelle est l'une des principales menaces pour la vie aquatique identifiées par l'ODD 14 ?</p>
           <label><input type="radio" name="q2" value="a"> a) La déforestation</label><br>
-          <label><input type="radio" name="q2" value="b"> b) La pollution marine</label><br>
-          <label><input type="radio" name="q2" value="c"> c) La désertification</label><br>
+          <label><input type="radio" name="q2" value="b"> c) La désertification</label><br>
+          <label><input type="radio" name="q2" value="c"> b) La pollution marine</label><br>
           <label><input type="radio" name="q2" value="d"> d) Les émissions de gaz à effet de serre</label><br>
           <div class="feedback">
-            <img src="/public/img1/1.png" alt="Correct" class="correct-img">
-            <img src="incorrect.png" alt="Incorrect" class="incorrect-img">
+            <img src="img1/2.png" alt="Correct" class="correct-img"style="height: 200px; width:200px;">
+            <img src="img1/4.png" alt="Incorrect" class="incorrect-img"style="height: 200px; width:200px;">
           </div>
+          <button type="button" onclick="checkAnswers()">Confirmer</button>
           <button type="button" onclick="nextStep()">Suivant</button>
         </div>
         <div class="step">
@@ -66,9 +52,10 @@
           <label><input type="radio" name="q3" value="c"> c) En construisant plus de centrales nucléaires</label><br>
           <label><input type="radio" name="q3" value="d"> d) En augmentant les subventions aux énergies fossiles</label><br>
           <div class="feedback">
-            <img src="/public/img1/1.png" alt="Correct" class="correct-img">
-            <img src="incorrect.png" alt="Incorrect" class="incorrect-img">
+            <img src="img1/2.png" alt="Correct" class="correct-img"style="height: 200px; width:200px;">
+            <img src="img1/5.png" alt="Incorrect" class="incorrect-img"style="height: 200px; width:200px;">
           </div>
+          <button type="button" onclick="checkAnswers()">Confirmer</button>
           <button type="button" onclick="nextStep()">Suivant</button>
         </div>
         <div class="step">
@@ -78,98 +65,53 @@
           <label><input type="radio" name="q4" value="c"> c) Elles réduisent les émissions de CO2</label><br>
           <label><input type="radio" name="q4" value="d"> d) Elles augmentent la production de charbon</label><br>
           <div class="feedback">
-            <img src="/public/img1/1.png" alt="Correct" class="correct-img">
-            <img src="incorrect.png" alt="Incorrect" class="incorrect-img">
+            <img src="img1/2.png" alt="Correct" class="correct-img" style="height: 200px; width:200px;">
+            <img src="img1/6.png" alt="Incorrect" class="incorrect-img" style="height: 200px; width:200px;">
           </div>
+          <button type="button" onclick="checkAnswers()">Confirmer</button>
           <button type="button" onclick="nextStep()">Suivant</button>
         </div>
-        <!-- Ajoutez les autres questions ici de la même manière -->
         <div class="step">
           <h2>Questions Moyennes</h2>
           <p>Quels sont les impacts de la surpêche sur les écosystèmes marins ?</p>
-          <label><input type="radio" name="q5" value="a"> a) Augmentation de la biodiversité</label><br>
-          <label><input type="radio" name="q5" value="b"> b) Diminution des populations de poissons et déséquilibre des écosystèmes</label><br>
+          <label><input type="radio" name="q5" value="a"> a) Diminution des populations de poissons et déséquilibre des écosystèmes</label><br>
+          <label><input type="radio" name="q5" value="b"> b) Augmentation de la biodiversité</label><br>
           <label><input type="radio" name="q5" value="c"> c) Augmentation de la productivité agricole</label><br>
           <label><input type="radio" name="q5" value="d"> d) Réduction des émissions de gaz à effet de serre</label><br>
           <div class="feedback">
-            <img src="/public/img1/1.png" alt="Correct" class="correct-img">
-            <img src="incorrect.png" alt="Incorrect" class="incorrect-img">
+            <img src="img1/2.png" alt="Correct" class="correct-img" style="height: 200px; width:200px;">
+            <img src="img1/7.png" alt="Incorrect" class="incorrect-img" style="height: 200px; width:200px;">
           </div>
+          <button type="button" onclick="checkAnswers()">Confirmer</button>
           <button type="button" onclick="nextStep()">Suivant</button>
         </div>
-        <!-- Ajoutez les autres questions ici de la même manière -->
         <div class="step">
           <h2>Questions Difficiles</h2>
           <p>Quelles sont les cibles spécifiques de l'ODD 14 pour 2030 ?</p>
-          <label><input type="radio" name="q6" value="a"> a) Éradiquer la pauvreté</label><br>
-          <label><input type="radio" name="q6" value="b"> b) Réduire la pollution marine, protéger les écosystèmes marins et côtiers, et gérer durablement les ressources marines</label><br>
-          <label><input type="radio" name="q6" value="c"> c) Assurer l'accès de tous à des services de santé de qualité</label><br>
+          <label><input type="radio" name="q6" value="a"> a) Assurer l'accès de tous à des services de santé de qualité</label><br>
+          <label><input type="radio" name="q6" value="b"> b) Éradiquer la pauvreté</label><br>
+          <label><input type="radio" name="q6" value="c"> b) Réduire la pollution marine, protéger les écosystèmes marins et côtiers, et gérer durablement les ressources marines</label><br>
           <label><input type="radio" name="q6" value="d"> d) Promouvoir une croissance économique soutenue</label><br>
           <div class="feedback">
-            <img src="/public/img1/1.png" alt="Correct" class="correct-img">
-            <img src="/public/img1/2.png" alt="Incorrect" class="incorrect-img">
+            <img src="img1/2.png" alt="Correct" class="correct-img" style="height: 200px; width:200px;">
+            <img src="img1/7.png" alt="Incorrect" class="incorrect-img" style="height: 200px; width:200px;">
           </div>
+          <button type="button" onclick="checkAnswers()">Confirmer</button>
           <button type="button" onclick="nextStep()">Suivant</button>
         </div>
-        <!-- Ajoutez les autres questions ici de la même manière -->
         <div class="step">
-          <button type="button" onclick="checkAnswers()">Soumettre</button>
+          <h1>Bravo !</h1>
+          <p>Vous avez obtenu un score de : <span id="scoreDisplay">0</span> sur 6.</p>
+          <button type="button" onclick="restartQuiz()">Recommencer</button>
         </div>
       </form>
     </section>
   </main>
   <footer>
   </footer>
+  <script src="script_app.js"></script>
+  <script type="module" src="script_bubules.js"></script>
 
-  <script>
-    let currentStep = 0;
-    const steps = document.querySelectorAll('.step');
-    const correctAnswers = {
-        q1: 'b',
-        q2: 'b',
-        q3: 'b',
-        q4: 'b',
-        q5: 'b',
-        q6: 'b'
-        // Ajoutez les autres réponses correctes ici
-    };
-
-    function nextStep() {
-        steps[currentStep].classList.remove('active');
-        currentStep++;
-        if (currentStep < steps.length) {
-            steps[currentStep].classList.add('active');
-        }
-    }
-
-
-    function checkAnswers() {
-    const form = document.getElementById('quizForm');
-    const formData = new FormData(form);
-    let score = 0;
-
-    for (let [name, value] of formData.entries()) {
-        const question = document.querySelector(`input[name="${name}"][value="${value}"]`);
-        const feedback = question.closest('.step').querySelector('.feedback');
-        const correctImg = feedback.querySelector('.correct-img');
-        const incorrectImg = feedback.querySelector('.incorrect-img');
-
-        if (value === correctAnswers[name]) {
-            question.parentElement.classList.add('correct');
-            correctImg.style.display = 'inline';
-            incorrectImg.style.display = 'none';
-            score++;
-        } else {
-            question.parentElement.classList.add('incorrect');
-            correctImg.style.display = 'none';
-            incorrectImg.style.display = 'inline';
-        }
-
-        feedback.style.display = 'block';
-    }
-
-    alert(`Vous avez obtenu ${score} sur ${Object.keys(correctAnswers).length}`);
-}
-  </script>
+ 
 </body>
 </html>

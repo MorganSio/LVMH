@@ -4,19 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeu - Le Plongeur de la Vie</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css_st.css">
+  <link rel="stylesheet" href="css_style.css">
 </head>
 <body>
-  <header>
-    <h1>LVMH</h1>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="jeu.html">Jeu</a></li>
-        <li><a href="quizz.html">Quizz</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="header"></div>
   <main>
     <section class="game-section">
       <h2>Le Plongeur de la Vie : Un Voyage au Cœur de l’Océan et de l’Homme</h2>
@@ -37,13 +29,16 @@
       <div id="infoPanel">
         <p>Oxygène : <span id="oxygen">100</span></p>
         <p>Déchets ramassés : <span id="points">0</span></p>
-        <p>Niveau : <span id="level">1</span></p>
+        <p>Année(s) : <span id="level">1</span></p>
       </div>
     </section>
   </main>
   <footer>
     <p>© 2024 LVMH. Tous droits réservés.</p>
   </footer>
-  <script src="jeu.js"></script>
+  <script src="script.js"></script>
+  <script src="script_jeu.js"></script>
+  <script type="module" src="script_bubules.js"></script>
+
 </body>
 </html>

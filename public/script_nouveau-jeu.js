@@ -83,9 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (laser.y < enemy.y + enemy.height && laser.y > enemy.y) {
           dodge = true;
           if (enemy.y + enemy.height / 2 < canvas.height / 2) {
-            enemy.y += enemy.speed; // Move down
+            enemy.y += enemy.speed; 
           } else {
-            enemy.y -= enemy.speed; // Move up
+            enemy.y -= enemy.speed;
           }
         }
       });
