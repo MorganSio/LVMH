@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu - Le Plongeur de la Vie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>LVMH</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jeu.html">Jeu</a></li>
+        <li><a href="quizz.html">Quizz</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="game-section">
+      <h2>Le Plongeur de la Vie : Un Voyage au Cœur de l’Océan et de l’Homme</h2>
+      <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="humanBodyContainer">
+          <img id="humanBody" src="https://www.pngarts.com/files/11/Human-Body-Free-PNG-Image.png" alt="Human Body">
+          <div id="debrisOverlay">
+            <img class="debris" id="debrisArmLeft" src="https://cdn.pixabay.com/photo/2018/04/18/16/03/plastic-3330759_640.png" alt="Déchet Bras Gauche">
+            <img class="debris" id="debrisArmRight" src="https://cdn.pixabay.com/photo/2018/04/18/16/03/plastic-3330759_640.png" alt="Déchet Bras Droit">
+            <img class="debris" id="debrisLegLeft" src="https://cdn.pixabay.com/photo/2018/04/18/16/03/plastic-3330759_640.png" alt="Déchet Jambe Gauche">
+            <img class="debris" id="debrisLegRight" src="https://cdn.pixabay.com/photo/2018/04/18/16/03/plastic-3330759_640.png" alt="Déchet Jambe Droite">
+            <img class="debris" id="debrisHead" src="https://cdn.pixabay.com/photo/2018/04/18/16/03/plastic-3330759_640.png" alt="Déchet Tête">
+            <img class="debris" id="debrisHeart" src="https://cdn.pixabay.com/photo/2018/04/18/16/03/plastic-3330759_640.png" alt="Déchet Cœur">
+          </div>
+        </div>
+      </div>
+      <div id="infoPanel">
+        <p>Oxygène : <span id="oxygen">100</span></p>
+        <p>Déchets ramassés : <span id="points">0</span></p>
+        <p>Niveau : <span id="level">1</span></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 LVMH. Tous droits réservés.</p>
+  </footer>
+  <script src="jeu.js"></script>
+</body>
+</html>
