@@ -199,6 +199,7 @@ body, h1, h2, p, ul, li, a {
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
   text-decoration: none;
+  text-align: center;
 }
  
   .button:hover {
