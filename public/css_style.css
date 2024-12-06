@@ -246,10 +246,12 @@ body, h1, h2, p, ul, li, a {
     color: #004d40;
     font-size: 1.2em;
   }
-  footer {
-    background-color: #00796b;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    bottom: 0;
-  }
+footer {
+  background-color: #00796b;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
