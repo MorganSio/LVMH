@@ -4,8 +4,10 @@
   "description": "Sur terre comme au ciel, moi seul mérite d'être vénéré.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "start": "node index.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MorganSio/LVMH.git"
