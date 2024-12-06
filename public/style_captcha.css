@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0f7fa;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#game-container {
+  text-align: center;
+}
+
+#gameCanvas {
+  border: 2px solid #00796b;
+  background-color: #004d40;
+}
+
+#code-container {
+  margin-top: 20px;
+}
+
+#captcha-code {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+#success-message {
+  display: none;
+  font-size: 24px;
+  color: #00796b;
+}

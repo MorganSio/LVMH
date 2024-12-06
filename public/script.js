@@ -2,11 +2,11 @@ let currentStep = 0;
 const steps = document.querySelectorAll('.step');
 const correctAnswers = {
     q1: 'b',
-    q2: 'b',
+    q2: 'c',
     q3: 'b',
     q4: 'b',
-    q5: 'b',
-    q6: 'b'
+    q5: 'a',
+    q6: 'c'
     // Ajoutez les autres réponses correctes ici
 };
 
@@ -50,3 +50,11 @@ for (let [name, value] of formData.entries()) {
 
 alert(`Vous avez obtenu ${score} sur ${Object.keys(correctAnswers).length}`);
 }
+
+// Charger le fichier header.html et l'insérer dans la page
+fetch('header.html')
+.then(response => response.text())
+.then(data => {
+  document.getElementById('header').innerHTML = data;
+})
+.catch(error => console.error('Erreur lors du chargement du header:', error));

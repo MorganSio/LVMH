@@ -1,0 +1,44 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de QRCode Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="qrcode.css">    
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <div class="container">
+            <div class="qr-generator">
+                <h2>Générer un QRCode</h2>
+                <form id="qrForm">
+                    <input type="text" id="url" placeholder="Entrez l'URL" required>
+                    <select id="pokemon" required>
+                        <option value="">Sélectionnez un Pokémon</option>
+                        <option value="magicarp">Magicarp</option>
+                        <option value="bulbasaur">Bulbasaur</option>
+                        <option value="charmander">Charmander</option>
+                        <option value="squirtle">Squirtle</option>
+                        <option value="pikachu">Pikachu</option>
+                    </select>
+                    <button type="submit">Générer</button>
+                </form>
+                <div class="qr-code" id="qrCode">
+                    <!-- QR Code will be displayed here -->
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <h3 id="popupTitle">Titre de la Pop-up</h3>
+                <p id="popupMessage">Message de sensibilisation</p>
+                <button onclick="closePopup()">Fermer</button>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="script_qrcode.js"></script>
+</body>
+</html>
