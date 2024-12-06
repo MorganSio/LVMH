@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPTCHA - Course de bateau écologique</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_captcha.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section>
+      <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="code-container">
+            <input type="text" id="captcha-code" placeholder="Entrez le code">
+            <button id="validate-button">Valider</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="script_captcha.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
